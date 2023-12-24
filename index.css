@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Example usage of screen breakpoints in CSS */
+body{
+ max-width: min-content;
+ background-image: url(https://img.freepik.com/free-photo/background_53876-32170.jpg?w=1800&t=st=1703419275~exp=1703419875~hmac=3ef9074d56ecbaa2512eba483d311db8361296ac300ca4597b206831d4cc6002);
+ object-fit: fill;
+}
+/* For tablet screens and above */
+@media (min-width: 640px) {
+    /* Add your styles for tablets here */
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* For laptop screens and above */
+  @media (min-width: 1024px) {
+    /* Add your styles for laptops here */
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* For desktop screens and above */
+  @media (min-width: 1280px) {
+    /* Add your styles for desktops here */
+    body {
+      font-size: 20px;
+    }
+  }
+  
