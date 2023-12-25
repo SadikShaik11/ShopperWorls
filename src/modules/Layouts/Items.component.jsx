@@ -106,6 +106,9 @@ const Items = () => {
         <button
           className="inline-flex mt-8 items-center justify-center gap-2 px-6 py-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50"
           style={{ "--Button2": "#DB4444" }}
+          onClick={() => {
+            window.location.href = "/products";
+          }}
         >
           View All Products
         </button>

@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="p-4 font-poppins bg-white sm:p-6 dark:bg-black mx-[1%]">
+      <footer className="p-4 font-poppins bg-white sm:p-6 dark:bg-black ">
         <div className="mx-auto max-w-screen-xl">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">

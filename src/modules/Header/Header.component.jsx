@@ -13,7 +13,7 @@ const Header = () => {
       {/* Navigation */}
       <nav className="font-poppins text-md flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 flex-grow">
         <a
-          href="#"
+          href="/"
           className="font-poppins text-pink-800 hover:text-pink-500 transition duration-300 block sm:inline"
         >
           Home
