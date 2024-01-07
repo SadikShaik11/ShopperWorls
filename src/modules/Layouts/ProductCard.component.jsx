@@ -33,7 +33,7 @@ const ProductCard = ({ productDetails }) => {
         <div className="relative">
           <img
             className="w-full h-[180px] object-cover"
-            src={productDetails.image}
+            src={productDetails.images[0]}
             alt="Product Image"
           />
           <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">

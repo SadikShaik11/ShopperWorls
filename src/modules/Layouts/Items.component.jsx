@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ItemDetails from "./ItemDetails.component";
 import Timer from "../../utils/TimerCompnent";
 import data from "../../assets/data/data";
-const Items = () => {
+const Items = ({ timer, content, slides }) => {
   const { fashionItems } = data;
   const productCards = [];
 
@@ -13,7 +13,7 @@ const Items = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: slides ? slides : 4,
     slidesToScroll: 1,
     // prevArrow: <SamplePrevArrow />,
     // nextArrow: <SampleNextArrow />,
@@ -21,7 +21,7 @@ const Items = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: slides ? slides : 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -77,9 +77,15 @@ const Items = () => {
             </svg>
           </span>
 
-          <span className="font-poppins  font-bold flex text-md text-rose-400">
-            Top Deals Ends in {<Timer />}
-          </span>
+          {timer ? (
+            <span className="font-poppins  font-bold flex text-md text-rose-400">
+              Top Deals Ends in {<Timer />}
+            </span>
+          ) : (
+            <>
+              <span>{content}</span>
+            </>
+          )}
           <span onClick={handlePrev}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

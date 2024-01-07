@@ -1,5 +1,7 @@
 import React from "react";
 import avatar from "../../assets/images/avatar.png";
+import cartIcon from "../../assets/images/shopping-cart.png";
+import CartIcon from "../Layouts/CartButton.component";
 const Header = () => {
   return (
     <header className=" w-screen font-poppins sm:w-screen bg-white shadow-sm m-2  max-w-[95%] rounded-md flex flex-col sm:flex-row items-center justify-between">
@@ -39,6 +41,7 @@ const Header = () => {
           placeholder="Search Something..."
           className="border-2 text-sm bg-transparent px-3 sm:px-5 rounded-2xl py-1 border-rose-100 focus:border-rose-300 focus:outline-none"
         ></input>
+        <CartIcon></CartIcon>
         <img
           src={avatar}
           alt="Profile"

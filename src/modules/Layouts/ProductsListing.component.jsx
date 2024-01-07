@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ProductListingApi from "../api/ProductListing";
 import ProductCard from "./ProductCard.component";
+import { Link } from "react-router-dom";
 
 const ProductListing = () => {
   let [allProducts, setAllProducts] = useState([]);
@@ -22,14 +23,19 @@ const ProductListing = () => {
     <div className=" flex flex-wrap gap-3 ">
       {allProducts && allProducts.length > 0 ? (
         allProducts.map((productDetails, index) => (
-          <div className="" key={index}>
-            <ProductCard
-              key={productDetails.id}
-              title={productDetails.title}
-              price={productDetails.price}
-              productDetails={productDetails}
-            />
-          </div>
+          <Link
+            to={"/product-details/" + productDetails.id}
+            className="no-style-link"
+          >
+            <div className="" key={index}>
+              <ProductCard
+                key={productDetails.id}
+                title={productDetails.title}
+                price={productDetails.price}
+                productDetails={productDetails}
+              />
+            </div>
+          </Link>
         ))
       ) : (
         <p>No products available</p>
